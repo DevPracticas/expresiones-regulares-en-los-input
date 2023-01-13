@@ -43,8 +43,6 @@
             <input type="text" pattern=".iobamba">
             <span>[a-z A-Z \ñ \Ñ]</span>
             <input type="text" pattern="[a-z A-Z]">
-            <span>[0-9]</span>
-            <input type="text" pattern="[0-9]">
             <input type="submit" value="Enviar">
             <input type="reset">
         </form>
@@ -60,6 +58,81 @@
             <input type="text" placeholder="Cédula" pattern="[0-9]{10}">
         </form>
 
+        <form action="">
+            <h2>Letras minúsculas</h2>
+            <input type="text" pattern="[a-z]{10}">
+        </form>
+
+        <form action="">
+            <h2>Letras mayúsculas</h2>
+            <input type="text" pattern="[A-Z]{10}">
+        </form>
+
+        <form action="">
+            <h2>Sólo números</h2>
+            <input type="text" pattern="[0-9]{10}">
+        </form>
+
+        <form action="">
+            <h2>8 o mas caracteres</h2>
+            <input type="text" pattern=".{8,}">
+        </form>
+
+        <form action="">
+            <h2>De 10 hasta 50 letras</h2>
+            <input type="text" pattern="[a-zA-Z]{10,50}">
+        </form>
+
+        <form action="">
+            <h2>De 8 hasta 12 letras o números y simbolos ._%+-</h2>
+            <input type="password" pattern="[a-zA-Z0-9._%+-]{8,12}">
+        </form>
+
+        <form action="">
+            <h2>Validar email</h2>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,10}$">
+        </form>
+
+        <form action="">
+            <h2>Validar contraseña</h2>
+            <input type="password" id="pwd" name="pwd"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres">
+        </form>
+
+        <form action="">
+            <h2>No debe tener ' o "</h2>
+            <input type="search" id="search" name="search"
+            pattern="[^'\x22]+" title="No debe tener ' o &quot">
+        </form>
+
+        <form action="" id="form_busca_cadena">
+            <h2>Buscar números de 10 dígitos dentro de una cadena</h2>
+            <input type="text" id="busca_cadena" name="busca_cadena">
+            <span>Se encontro: </span>
+            <span id="resp_busca_cadena"></span>
+        </form>
+
+        <form action="" id="form_cadena_a_array">
+            <h2>cadena a array</h2>
+            <input type="text" id="cadena_a_array" >
+            <span>respuesta: </span>
+            <span id="resp_cadena_a_array"></span>
+        </form>
+
+        <form action="" id="verificar_telefono">
+            <h2>verificar_telefono</h2>
+            <input type="text" id="cadena_telefono" >
+            <span>respuesta: </span>
+            <span id="resp_telefono"></span>
+        </form>
+
+        <form action="" id="reemplazar_texto">
+            <h2>buscar asdf y reemplazar por aaaa</h2>
+            <input type="text" id="reemplazar_texto_input" >
+            <span>respuesta: </span>
+            <span id="resp_reemplazar_texto"></span>
+        </form>
     </div>
     <script src="app.js"></script>
 </body>
